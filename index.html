@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sakshi Wagh | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset & base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #f9f9fb;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    /* Hero Section */
+    #home {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .hero-container {
+      max-width: 800px;
+    }
+    .profile-pic {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid white;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+    }
+    .profile-pic:hover {
+      transform: scale(1.05);
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+    .tagline {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+    .links a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    .links a:hover {
+      color: #ffeb3b;
+    }
+    nav button {
+      margin: 10px;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 30px;
+      background: #ffeb3b;
+      color: #333;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+    nav button:hover {
+      background: #fdd835;
+      transform: scale(1.05);
+    }
+
+    /* Sections */
+    .section {
+      padding: 60px 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+    h2 {
+      font-size: 2.5em;
+      margin-bottom: 30px;
+      color: #764ba2;
+    }
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .skills-list li {
+      background: linear-gradient(45deg, #43cea2, #185a9d);
+      color: white;
+      margin: 10px;
+      padding: 12px 20px;
+      border-radius: 25px;
+      font-size: 1em;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    /* Projects */
+    .project-card {
+      background: #fff;
+      text-align: left;
+      padding: 25px;
+      margin: 20px 0;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+    .project-card h3 {
+      margin-bottom: 10px;
+      color: #667eea;
+    }
+    .project-card p {
+      line-height: 1.6;
+    }
+
+    /* Hidden class for JS toggling */
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <section id="home">
+    <div class="hero-container">
+      <img src="sakshi.jpg" alt="Sakshi Photo" class="profile-pic" />
+      <h1>Sakshi Wagh</h1>
+      <p class="tagline">Final Year IT Student | Web Developer</p>
+      <div class="links">
+        <a href="https://github.com/sakshiwaghgit" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/sakshiwagh123" target="_blank">LinkedIn</a>
+      </div>
+      <nav>
+        <button onclick="scrollToSection('about')">About</button>
+        <button onclick="scrollToSection('skills')">Skills</button>
+        <button onclick="scrollToSection('projects')">Projects</button>
+        <button onclick="scrollToSection('contact')">Contact</button>
+      </nav>
+    </div>
+  </section>
+
+  <section id="about" class="hidden section">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>I am a final year Information Technology student at SKNCOE, Pune, with strong expertise in web development, Java, and modern frameworks. I build solutions that are impactful, scalable, and user-friendly.</p>
+    </div>
+  </section>
+
+  <section id="skills" class="hidden section">
+    <div class="container">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Java</li>
+        <li>ReactJS</li>
+        <li>NodeJS</li>
+        <li>SQL</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects" class="hidden section">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="project-card">
+        <h3>NAAC Accreditation Website</h3>
+        <p>A centralized platform for colleges to manage multi-year accreditation data efficiently, including secure logins, dynamic dashboards, and document uploads. Built with PHP, MySQL, and JavaScript to automate manual workflows.</p>
+      </div>
+      <div class="project-card">
+        <h3>Healthy Diet Planner</h3>
+        <p>An AI-integrated platform for personalized meal planning based on health goals and preferences, with disease prevention suggestions. Developed using ReactJS, NodeJS, and AI APIs.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="hidden section">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Email: sakshiwagh183@gmail.com</p>
+    </div>
+  </section>
+
+  <script>
+    function scrollToSection(sectionId) {
+      const sections = document.querySelectorAll("section");
+      sections.forEach(sec => {
+        if (sec.id === sectionId || sec.id === 'home') {
+          sec.style.display = "block";
+        } else {
+          sec.style.display = "none";
+        }
+      });
+      document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
